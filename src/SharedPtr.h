@@ -61,4 +61,15 @@ private:
     // field to hold the T*
     T* managed_pointer;
 };
+
+template <typename T>
+class SharedPtr {
+public:
+    // default constructor
+
+    // constructor from T*
+
+private:
+    // two fields
+};
 #endif
