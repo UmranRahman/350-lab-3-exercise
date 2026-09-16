@@ -62,6 +62,7 @@ private:
     T* managed_pointer;
 };
 
+// Used AI to get template for myself to figure out how to implement
 template <typename T>
 class SharedPtr {
 public:
