@@ -32,6 +32,7 @@ public:
 
 private:
     // TODO: add field(s) which both control block types need to have
+    long ref_count;
 };
 
 #endif
