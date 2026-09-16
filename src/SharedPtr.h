@@ -3,7 +3,7 @@
 
 class ControlBlockBase {
 public:
-    ControlBlockBase(); // TODO: implement the default constructor.
+    ControlBlockBase(): ref_count(1) {}; // TODO: implement the default constructor.
 
     // dtor is virtual, so that we can call derived class's dtor from a ptr to this base class.
     virtual ~ControlBlockBase(); // TODO: implement the destructor.
@@ -18,16 +18,19 @@ public:
     long increment()
     {
         // TODO: increment refcount by 1 and return result.
+        return ++ref_count;
     }
 
     long decrement()
     {
         // TODO: decrement refcount by 1 and return result.
+        return --ref_count;
     }
 
     long refCount() const
     {
         // TODO: just return the refcount.
+        return ref_count;
     }
 
 private:
